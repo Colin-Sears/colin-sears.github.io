@@ -1,0 +1,17 @@
+.next/
+out/
+node_modules/
+*.log
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Documentation (keep local only)
+docs/
+
+# Resume files (keep local only)
+*.pdf
+*.docx
+resume_extracted.txt
