@@ -18,9 +18,4 @@ export const NAV_LINKS = {
     { label: 'Experience', href: '#experience' },
     { label: 'Contact', href: '#contact' },
   ],
-  personal: [
-    { label: 'Games', href: '#games' },
-    { label: 'Lore', href: '#lore' },
-    { label: 'Creative', href: '#creative' },
-  ],
 };
