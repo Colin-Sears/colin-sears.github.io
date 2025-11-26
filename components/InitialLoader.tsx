@@ -2,16 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { useReducedMotion, motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 
 export default function InitialLoader() {
   const shouldReduce = useReducedMotion();
   const [show, setShow] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
-    // Skip global initial loader on personal side to avoid double overlays; BootOverlay will handle it
-    if (pathname?.startsWith('/personal')) return;
     // Only show once per tab session
     const seen = sessionStorage.getItem('init-loader-shown');
     if (!seen) {
@@ -38,7 +34,7 @@ export default function InitialLoader() {
         className="text-center"
       >
         <div className="text-xs tracking-widest mb-2">[ SYSTEM INIT ]</div>
-        <div className="text-2xl md:text-3xl font-bold">CREATIVE OPERATIONS</div>
+        <div className="text-2xl md:text-3xl font-bold">COLIN SEARS</div>
       </motion.div>
     </motion.div>
   );
