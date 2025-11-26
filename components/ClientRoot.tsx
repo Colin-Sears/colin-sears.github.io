@@ -2,7 +2,6 @@
 
 import { ReactNode } from 'react';
 import PageTransition from '@/components/PageTransition';
-import InitialLoader from '@/components/InitialLoader';
 import BootOverlay from './BootOverlay';
 import { motion } from 'framer-motion';
 import { useBoot } from '@/components/BootContext';
@@ -13,7 +12,6 @@ export default function ClientRoot({ children }: { children: ReactNode }) {
     <>
       {/* Personal side boot log overlay (covers entire UI, including nav) */}
       <BootOverlay />
-      <InitialLoader />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: bootActive ? 0 : 1 }}
