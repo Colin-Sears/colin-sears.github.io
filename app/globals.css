@@ -29,6 +29,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  /* Custom vertical section padding helper (reduced) */
+  .py-section {
+    /* Previously likely large; now tuned for tighter vertical rhythm */
+    padding-top: clamp(4rem,12vh,8rem);
+    padding-bottom: clamp(4rem,12vh,8rem);
+  }
 }
 
 /* Loading animations */

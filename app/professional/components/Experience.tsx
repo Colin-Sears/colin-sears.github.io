@@ -12,7 +12,7 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-section px-8 bg-gray-50">
+    <section id="experience" className="py-section px-8">
       <div className="max-w-content mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

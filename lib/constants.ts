@@ -13,9 +13,10 @@ export const SITE_CONFIG = {
 
 export const NAV_LINKS = {
   professional: [
-    { label: 'Work', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'GitHub', href: '#github' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Get In Touch', href: '#contact' },
   ],
 };

@@ -3,7 +3,7 @@ export type Mode = 'professional' | 'personal';
 export interface Project {
   title: string;
   description: string;
-  image: string;
+  images: (string | null)[]; // Array of image paths, null for missing images
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;

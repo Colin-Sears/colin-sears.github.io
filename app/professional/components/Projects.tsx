@@ -3,13 +3,13 @@
 import { motion } from 'framer-motion';
 import { projects } from '@/lib/data/projects';
 import { ExternalLink, Github } from 'lucide-react';
-import Image from 'next/image';
+import ProjectImageCarousel from '@/components/ProjectImageCarousel';
 
 export default function Projects() {
   const featuredProjects = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="py-section px-8 bg-gray-50">
+  <section id="projects" className="py-section px-8">
       <div className="max-w-content mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -31,19 +31,16 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              {/* Project Image */}
-              <div className="relative w-full aspect-[16/9] bg-gray-200 rounded-sm overflow-hidden mb-8">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full h-full"
-                >
-                  {/* Placeholder for now - replace with actual images */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <p className="text-gray-600 text-xl">Project Image</p>
-                  </div>
-                </motion.div>
-              </div>
+              {/* Project Image Carousel (only render if images array not empty) */}
+              {project.images.length > 0 && (
+                <div className="mb-8">
+                  <ProjectImageCarousel
+                    images={project.images}
+                    projectTitle={project.title}
+                    showPlaceholder={project.images.every(img => img === null)}
+                  />
+                </div>
+              )}
 
               {/* Project Info */}
               <h3 className="text-project font-bold mb-4">{project.title}</h3>

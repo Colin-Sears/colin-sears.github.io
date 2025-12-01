@@ -34,17 +34,33 @@ export async function fetchGitHubStats(username: string): Promise<GitHubStats> {
       'Accept': 'application/vnd.github.v3+json',
     };
 
-    // Add token if available (increases rate limit)
+    // Add token if available (increases rate limit from 60 to 5000 requests/hour)
     if (process.env.NEXT_PUBLIC_GITHUB_TOKEN) {
       headers['Authorization'] = `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`;
     }
 
     // Fetch user data
-    const userResponse = await fetch(`${GITHUB_API}/users/${username}`, { headers });
+    const userResponse = await fetch(`${GITHUB_API}/users/${username}`, { 
+      headers,
+      next: { revalidate: 3600 } // Cache for 1 hour
+    });
+    
+    if (!userResponse.ok) {
+      throw new Error(`GitHub API error: ${userResponse.status}`);
+    }
+    
     const userData: GitHubUser = await userResponse.json();
 
     // Fetch repositories
-    const reposResponse = await fetch(`${GITHUB_API}/users/${username}/repos?per_page=100`, { headers });
+    const reposResponse = await fetch(`${GITHUB_API}/users/${username}/repos?per_page=100&sort=updated`, { 
+      headers,
+      next: { revalidate: 3600 } // Cache for 1 hour
+    });
+    
+    if (!reposResponse.ok) {
+      throw new Error(`GitHub API error: ${reposResponse.status}`);
+    }
+    
     const repos: GitHubRepo[] = await reposResponse.json();
 
     // Calculate total stars
@@ -68,14 +84,14 @@ export async function fetchGitHubStats(username: string): Promise<GitHubStats> {
       .slice(0, 5); // Top 5 languages
 
     return {
-      totalCommits: 0, // Requires additional API calls to get commit count
+      totalCommits: 0, // Note: Calculating total commits requires querying each repo individually (rate-limited)
       publicRepos: userData.public_repos,
-      contributions: 0, // Requires scraping or GitHub GraphQL API
+      contributions: 0, // Note: Requires GitHub GraphQL API or web scraping
       languages,
     };
   } catch (error) {
     console.error('Error fetching GitHub stats:', error);
-    // Return placeholder data on error
+    // Return minimal data on error to avoid breaking the UI
     return {
       totalCommits: 0,
       publicRepos: 0,
