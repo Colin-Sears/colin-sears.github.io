@@ -8,6 +8,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
+  inprogress?: boolean;
   category: 'web' | 'mobile' | 'ai' | 'engineering' | 'other';
 }
 

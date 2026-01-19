@@ -2,6 +2,31 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    title: 'Aethervault',
+    description: 'Heavily inspired by COMP/CON for Lancer. Aethervault is a full rules compendium, character sheets, and combat runner for the tabletop RPG game ICON. Designed in React with Discord and Obsidian integration.',
+    images: ['/projects/aethervault.png'],
+    technologies: ['React', 'TypeScript', 'Node.js', 'Discord API', 'Obsidian'],
+    featured: true,
+    inprogress: true,
+    category: 'web'
+  },
+  {
+    title: 'Personal Portfolio Website',
+    description: 'This site! Built with Next.js and TypeScript.',
+    images: [],
+    technologies: ['Next.js', 'TypeScript', 'React', 'CSS Modules', 'Github Pages', 'Github Copilot'],
+    featured: true,
+    category: 'web'
+  },
+  {
+    title: 'Azure AI Document Intelligence Solutions',
+    description: 'Custom models for intelligent data extraction and automated document processing using Azure AI services.',
+    images: [], // Omit image block entirely (no placeholder)
+    technologies: ['Azure AI', 'Document Intelligence', 'Python', 'CI/CD', 'Full-Stack Development'],
+    featured: false,
+    category: 'ai',
+  },
+  {
     title: 'Satellite Mission Design & Test Unit',
     description: 'Senior design project developing a debris identification and retrieval satellite system with integrated visual guidance and navigation.',
     images: [
@@ -19,7 +44,7 @@ export const projects: Project[] = [
     description: 'Research project implementing and verifying numerical solutions for orbital mechanics calculations using MATLAB.',
     images: [null], // No image available
     technologies: ['MATLAB', 'LaTeX', 'Orbital Mechanics', 'Numerical Analysis'],
-    featured: true,
+    featured: false,
     category: 'engineering',
   },
   {
@@ -27,16 +52,8 @@ export const projects: Project[] = [
     description: 'Constructed a drone controller using embedded C++ and developed microcontroller API for cross-team integration.',
     images: [], // Omit image block entirely (no placeholder)
     technologies: ['C++', 'Embedded Systems', 'API Development', 'Hardware Integration'],
-    featured: true,
+    featured: false,
     category: 'engineering',
-  },
-  {
-    title: 'Azure AI Document Intelligence Solutions',
-    description: 'Custom models for intelligent data extraction and automated document processing using Azure AI services.',
-    images: [], // Omit image block entirely (no placeholder)
-    technologies: ['Azure AI', 'Document Intelligence', 'Python', 'CI/CD', 'Full-Stack Development'],
-    featured: true,
-    category: 'ai',
   },
   {
     title: 'University Web Services',
