@@ -15,14 +15,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-section px-8">
+    <section id="contact" className="py-section px-4 sm:px-6 md:px-8">
       <div className="max-w-content mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-section font-bold mb-16"
+          className="text-section font-bold mb-10 sm:mb-16"
         >
           Get In Touch
         </motion.h2>
@@ -36,9 +36,9 @@ export default function Contact() {
           {/* Email */}
           <button
             onClick={copyEmail}
-            className="group relative inline-block mb-12"
+            className="group relative inline-block mb-10 sm:mb-12"
           >
-            <h3 className="text-4xl md:text-5xl font-bold hover:opacity-60 transition-opacity">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold break-all sm:break-normal hover:opacity-60 transition-opacity">
               {SITE_CONFIG.email}
             </h3>
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-current transition-all duration-300 group-hover:w-full" />
@@ -57,12 +57,12 @@ export default function Contact() {
           </button>
 
           {/* Social Links */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             <a
               href={SITE_CONFIG.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-xl font-medium w-fit"
+              className="group flex items-center gap-3 text-lg sm:text-xl font-medium w-fit"
             >
               <Github size={24} />
               <span className="relative">
@@ -75,7 +75,7 @@ export default function Contact() {
               href={SITE_CONFIG.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-xl font-medium w-fit"
+              className="group flex items-center gap-3 text-lg sm:text-xl font-medium w-fit"
             >
               <Linkedin size={24} />
               <span className="relative">

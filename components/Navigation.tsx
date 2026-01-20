@@ -28,12 +28,12 @@ export default function Navigation() {
         </a>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-6 lg:gap-8">
+        <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 overflow-x-auto whitespace-nowrap pb-1">
           {NAV_LINKS.professional.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/50 transition-colors"
+              className="text-xs sm:text-sm font-medium relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/50 transition-colors"
             >
               {link.label}
               <span

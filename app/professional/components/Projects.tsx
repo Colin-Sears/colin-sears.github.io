@@ -13,7 +13,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="p-6 border border-gray-200 hover:border-gray-300 transition-colors"
+      className="p-5 sm:p-6 border border-gray-200 hover:border-gray-300 transition-colors"
     >
       <div className="flex items-center gap-2 mb-2">
         <h4 className="text-xl font-bold">{project.title}</h4>
@@ -71,19 +71,19 @@ export default function Projects() {
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-section px-8">
+    <section id="projects" className="py-section px-4 sm:px-6 md:px-8">
       <div className="max-w-content mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-section font-bold mb-16"
+          className="text-section font-bold mb-10 sm:mb-16"
         >
           Featured Projects
         </motion.h2>
 
-        <div className="space-y-32">
+        <div className="space-y-16 sm:space-y-24 lg:space-y-32">
           {featuredProjects.map((project, index) => (
             <motion.article
               key={project.title}
@@ -111,10 +111,12 @@ export default function Projects() {
                   <span className="text-lg text-gray-500">(WIP)</span>
                 )}
               </div>
-              <p className="text-xl text-gray-700 mb-6 max-w-3xl">{project.description}</p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 max-w-3xl">
+                {project.description}
+              </p>
 
               {/* Technologies */}
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-5 sm:mb-6">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
@@ -126,13 +128,13 @@ export default function Projects() {
               </div>
 
               {/* Links */}
-              <div className="flex gap-6">
+              <div className="flex flex-wrap gap-4 sm:gap-6">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-lg font-medium hover:opacity-60 transition-opacity"
+                    className="flex items-center gap-2 text-base sm:text-lg font-medium hover:opacity-60 transition-opacity"
                   >
                     <Github size={20} />
                     <span>View Code</span>
@@ -143,7 +145,7 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-lg font-medium hover:opacity-60 transition-opacity"
+                    className="flex items-center gap-2 text-base sm:text-lg font-medium hover:opacity-60 transition-opacity"
                   >
                     <ExternalLink size={20} />
                     <span>Live Demo</span>
@@ -162,7 +164,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-bold mt-32 mb-10"
+              className="text-2xl sm:text-3xl font-bold mt-16 sm:mt-24 lg:mt-32 mb-6 sm:mb-10"
             >
               Other Projects
             </motion.h3>

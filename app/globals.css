@@ -37,6 +37,13 @@ body {
   }
 }
 
+@media (max-width: 640px) {
+  .py-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 /* Loading animations */
 @keyframes fadeIn {
   from {
