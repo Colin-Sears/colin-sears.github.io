@@ -1,13 +1,15 @@
 # Colin Sears – Professional Portfolio
 
-Modern, minimalist software engineering & aerospace portfolio built with **Next.js 14**, focusing on clarity, typography, and performance. The site currently ships only the professional "Work" persona; the creative/personal side described in `DESIGN_CONCEPT.md` is planned but not yet active.
+Modern, minimalist software engineering & aerospace portfolio built with **Next.js 14**, focusing on clarity, typography, and performance.
+
+> **Note:** This repo is the professional portfolio only. The creative/personal site (tabletop gaming, worldbuilding, creative projects) is planned as a separate site.
 
 ## ✨ Current Features
 
 - High-impact hero with large typographic identity
 - Featured Projects with image carousel (multi-image support + graceful placeholder logic)
 - Experience section with clean, left-aligned company/role blocks
-- GitHub Activity (public contributions + profile link; optional stats cards available via embed services)
+- GitHub Activity (public contributions + profile link)
 - Skills ("What I Work With") plain textual taxonomy—no badges
 - Contact section with large email, copy-to-clipboard, and social links
 - Subtle sectional dividers maintaining white background continuity
@@ -64,10 +66,10 @@ docs/                     # Design & update guides
 
 ## 🖼 Project Images & Carousel
 
-Each project now supports `images: (string | null)[]`:
+Each project supports `images: (string | null)[]`:
 
 - Non-empty array with valid paths → carousel renders.
-- Array of only `null` → light "Image Coming Soon" placeholder (Lambert problem example).
+- Array of only `null` → light "Image Coming Soon" placeholder.
 - Empty array (`[]`) → carousel omitted entirely (no placeholder box).
 
 Add images to `public/projects/` and reference with `/projects/your-file.ext` in `lib/data/projects.ts`.
@@ -99,35 +101,30 @@ Current implementation embeds public contributions & a profile link. Optional en
     ```
 2. Add a token (`NEXT_PUBLIC_GITHUB_TOKEN`) if expanding REST calls (see `lib/github.ts`).
 
-Private contribution counts appear only via these third-party stat cards; raw private activity details are not exposed.
-
 ## 🧪 Scripts
 
 ```bash
 npm run dev      # Start local dev
-npm run build    # Production build → .next/ then export if configured
-npm run start    # Start production server (if not exporting)
+npm run build    # Production build
+npm run start    # Start production server
 npm run lint     # Run ESLint
 ```
 
-For static GitHub Pages deployments, ensure export config (if added) or rely on Actions + Next.js static output.
-
-## 🗺 Roadmap (Professional → Personal)
+## 🗺 Roadmap
 
 | Status | Item |
 |--------|------|
 | ✅ | Core professional sections & animations |
 | ✅ | Image carousel & placeholder logic |
 | ✅ | Section dividers + spacing refinement |
-| 🚧 | Personal (Play) persona (gaming, lore, creative datasets) |
-| 🚧 | Performance polish (image preloading strategy, bundle trimming) |
+| 🚧 | Performance polish (image preloading, bundle trimming) |
 | 🚧 | Accessibility sweep (focus order, aria labeling) |
 | ⏳ | Advanced GitHub analytics (GraphQL contributions, languages) |
 
-## � Design Principles (Professional)
+## 🎨 Design Principles
 
 - White background, strong black typography
-- Generous but now balanced vertical rhythm
+- Generous but balanced vertical rhythm
 - Minimal UI chrome (no heavy cards or shadows)
 - Subtle motion, no distracting parallax
 - Flat dividers to separate conceptual blocks
@@ -149,16 +146,6 @@ Full specification: `docs/DESIGN_CONCEPT.md`.
 }
 ```
 
-## 🧪 Quality & Performance Notes
-
-- `next/image` used for responsive sizing & optimization
-- Framer Motion only on viewport-enter (reduces initial layout shift)
-- Placeholder logic avoids rendering empty gray boxes for non-image projects
-- Reduced vertical padding utility (`.py-section`) matches updated spacing goals
-
 ## ⚖️ License
 
 MIT – use, adapt, and build upon freely. Attribution appreciated.
-
----
-Questions / ideas for improvement? Open an issue or propose directly. The personal creative mode is the next major milestone.

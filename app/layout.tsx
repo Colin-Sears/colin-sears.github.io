@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import ClientRoot from '@/components/ClientRoot';
-import { BootProvider } from '@/components/BootContext';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -68,16 +67,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
-        <BootProvider>
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-black text-white px-3 py-2"
-          >
-            Skip to content
-          </a>
-          <Navigation />
-          <ClientRoot>{children}</ClientRoot>
-        </BootProvider>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-black text-white px-3 py-2"
+        >
+          Skip to content
+        </a>
+        <Navigation />
+        <ClientRoot>{children}</ClientRoot>
       </body>
     </html>
   );

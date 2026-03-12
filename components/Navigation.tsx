@@ -2,22 +2,14 @@
 
 import { SITE_CONFIG, NAV_LINKS } from '@/lib/constants';
 import { motion, useReducedMotion } from 'framer-motion';
-import { useBoot } from '@/components/BootContext';
 
 export default function Navigation() {
   const prefersReducedMotion = useReducedMotion();
-  const { bootActive } = useBoot();
 
   return (
     <motion.nav
       initial={prefersReducedMotion ? false : { opacity: 0, y: -20 }}
-      animate={{ 
-        opacity: bootActive ? 0 : 1, 
-        y: 0,
-      }}
-      style={{ 
-        pointerEvents: bootActive ? 'none' : 'auto',
-      }}
+      animate={{ opacity: 1, y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b bg-white border-gray-200"
       aria-label="Primary"
     >
