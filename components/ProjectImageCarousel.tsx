@@ -68,7 +68,7 @@ export default function ProjectImageCarousel({ images, projectTitle, showPlaceho
               alt={`${projectTitle} - Image ${currentIndex + 1}`}
               fill
               priority={currentIndex === 0}
-              className="object-cover object-center"
+              className="object-contain object-center"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1400px"
               quality={90}
             />

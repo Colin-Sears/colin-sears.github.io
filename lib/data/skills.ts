@@ -11,7 +11,7 @@ export const skills: Skill[] = [
   },
   {
     category: 'AI & Cloud Services',
-    items: ['Azure AI Document Intelligence', 'Azure Platform', 'AI Integration', 'Model Development'],
+    items: ['Azure AI Document Intelligence', 'Azure Platform', 'AI Integration', 'Model Development', 'Spec Driven Development'],
   },
   {
     category: 'Engineering Software',

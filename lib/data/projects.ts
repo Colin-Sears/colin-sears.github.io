@@ -2,11 +2,20 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    title: 'Lancer Briefings',
+    description: 'Based off of the Lancer Briefings project by @Kuenaimaku, I changed the theme and added a few features to aid my players in getting more immersed in our Lancer game set in the Karrakin Trade Baronies.',
+    images: ['/projects/lancer-briefings.png'],
+    technologies: ['Vue', 'Vite'],
+    featured: true,
+    inprogress: true,
+    category: 'web'
+  },
+  {
     title: 'Aethervault',
     description: 'Heavily inspired by COMP/CON for Lancer. Aethervault is a full rules compendium, character sheets, and combat runner for the tabletop RPG game ICON. Designed in React with Discord and Obsidian integration.',
     images: ['/projects/aethervault.png'],
     technologies: ['React', 'TypeScript', 'Node.js', 'Discord API', 'Obsidian'],
-    featured: true,
+    featured: false,
     inprogress: true,
     category: 'web'
   },
