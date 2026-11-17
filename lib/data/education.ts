@@ -5,7 +5,7 @@ export const education: Education[] = [
     institution: 'University of Colorado Boulder',
     program: 'Continuing Education — Astrodynamics and Satellite Navigation Systems',
     location: 'Boulder, CO',
-    dates: 'Fall 2026',
+    dates: 'Current',
     details: [
       'ASEN 5050 – Space Flight Dynamics',
       "Built a MATLAB orbital mechanics toolkit covering orbital elements, Kepler's equation, Lambert's problem, and Clohessy–Wiltshire relative motion",
