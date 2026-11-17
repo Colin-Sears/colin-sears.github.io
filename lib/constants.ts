@@ -15,6 +15,7 @@ export const NAV_LINKS = {
   professional: [
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
+    { label: 'Education', href: '#education' },
     { label: 'GitHub', href: '#github' },
     { label: 'Skills', href: '#skills' },
     { label: 'Get In Touch', href: '#contact' },

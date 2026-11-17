@@ -21,6 +21,14 @@ export interface Experience {
   achievements: string[];
 }
 
+export interface Education {
+  institution: string;
+  program: string;
+  location?: string;
+  dates: string;
+  details?: string[];
+}
+
 export interface Skill {
   category: string;
   items: string[];

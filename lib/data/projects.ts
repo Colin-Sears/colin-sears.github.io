@@ -11,6 +11,16 @@ export const projects: Project[] = [
     category: 'web'
   },
   {
+    title: 'Orbital Mechanics MATLAB Toolkit',
+    description: "MATLAB function library I built for ASEN 5050 Space Flight Dynamics at CU Boulder. It covers state vectors to orbital elements, Kepler's equation, and Lambert's problem, which I used to generate Earth–Mars porkchop plots from JPL Horizons ephemerides. It also includes Clohessy–Wiltshire relative-motion maneuver planning.",
+    images: [],
+    technologies: ['MATLAB', 'Orbital Mechanics', "Lambert's Problem", 'Numerical Methods', 'Astrodynamics'],
+    githubUrl: 'https://github.com/Colin-Sears/asen-5050-orbital-mechanics',
+    featured: true,
+    inprogress: true,
+    category: 'engineering',
+  },
+  {
     title: 'Aethervault',
     description: 'Heavily inspired by COMP/CON for Lancer. Aethervault is a full rules compendium, character sheets, and combat runner for the tabletop RPG game ICON. Designed in React with Discord and Obsidian integration.',
     images: ['/projects/aethervault.png'],
