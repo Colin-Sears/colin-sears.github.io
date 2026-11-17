@@ -13,9 +13,9 @@ export const projects: Project[] = [
   },
   {
     title: 'Lancer Briefings',
-    description: "Campaign hub for my Lancer TTRPG game set in the Karrakin Trade Baronies. I started from @Kuenaimaku's Lancer Briefings and grew it into a full companion site: mission briefings, an interactive star map with a built-in map editor, pilot and mech dossiers, faction standings, a company ledger and job board, and a campaign timeline. GM edits made in Foundry VTT sync to the live site through a Cloudflare content API.",
+    description: "Campaign hub for my Lancer TTRPG game set in the Karrakin Trade Baronies. I started from @Kuenaimaku's Lancer Briefings and grew it into a full companion site. GM edits made in Foundry VTT sync to the live site through a Cloudflare content API.",
     images: [],
-    video: '/projects/lancer-briefings-walkthrough.mp4',
+    video: '/projects/lancer-briefings-walkthrough-v2.mp4',
     videoPoster: '/projects/lancer-briefings-poster.jpg',
     technologies: ['Vue 3', 'Vite', 'Cloudflare Pages', 'Foundry VTT', 'Three.js'],
     featured: true,
