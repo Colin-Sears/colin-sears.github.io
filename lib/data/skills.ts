@@ -15,7 +15,7 @@ export const skills: Skill[] = [
   },
   {
     category: 'Engineering Software',
-    items: ['SolidWorks', 'Ansys Products', 'MATLAB', 'LaTeX', 'CAD'],
+    items: ['SolidWorks', 'Ansys Products', 'Ansys STK (Systems Tool Kit)', 'MATLAB', 'LaTeX', 'CAD'],
   },
   {
     category: 'Aerospace & Engineering',
