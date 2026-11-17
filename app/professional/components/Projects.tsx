@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { projects } from '@/lib/data/projects';
 import { ExternalLink, Github } from 'lucide-react';
 import ProjectImageCarousel from '@/components/ProjectImageCarousel';
+import ProjectVideo from '@/components/ProjectVideo';
 import { Project } from '@/lib/types';
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -93,8 +94,19 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
+              {/* Walkthrough video takes the place of the image carousel */}
+              {project.video && (
+                <div className="mb-8">
+                  <ProjectVideo
+                    src={project.video}
+                    poster={project.videoPoster}
+                    projectTitle={project.title}
+                  />
+                </div>
+              )}
+
               {/* Project Image Carousel (only render if images array not empty) */}
-              {project.images.length > 0 && (
+              {!project.video && project.images.length > 0 && (
                 <div className="mb-8">
                   <ProjectImageCarousel
                     images={project.images}

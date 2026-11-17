@@ -2,23 +2,25 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
-    title: 'Lancer Briefings',
-    description: 'Based off of the Lancer Briefings project by @Kuenaimaku, I changed the theme and added a few features to aid my players in getting more immersed in our Lancer game set in the Karrakin Trade Baronies.',
-    images: ['/projects/lancer-briefings.png'],
-    technologies: ['Vue', 'Vite'],
-    featured: true,
-    inprogress: true,
-    category: 'web'
-  },
-  {
     title: 'Orbital Mechanics MATLAB Toolkit',
-    description: "MATLAB function library I built for ASEN 5050 Space Flight Dynamics at CU Boulder. It covers state vectors to orbital elements, Kepler's equation, and Lambert's problem, which I used to generate Earth–Mars porkchop plots from JPL Horizons ephemerides. It also includes Clohessy–Wiltshire relative-motion maneuver planning.",
+    description: "MATLAB function library I built for ASEN 5050 Space Flight Dynamics at CU Boulder. It covers state vectors to orbital elements, Kepler's equation, Lambert's problem, and Clohessy–Wiltshire relative-motion maneuver planning.",
     images: [],
     technologies: ['MATLAB', 'Orbital Mechanics', "Lambert's Problem", 'Numerical Methods', 'Astrodynamics'],
     githubUrl: 'https://github.com/Colin-Sears/asen-5050-orbital-mechanics',
     featured: true,
     inprogress: true,
     category: 'engineering',
+  },
+  {
+    title: 'Lancer Briefings',
+    description: "Campaign hub for my Lancer TTRPG game set in the Karrakin Trade Baronies. I started from @Kuenaimaku's Lancer Briefings and grew it into a full companion site: mission briefings, an interactive star map with a built-in map editor, pilot and mech dossiers, faction standings, a company ledger and job board, and a campaign timeline. GM edits made in Foundry VTT sync to the live site through a Cloudflare content API.",
+    images: [],
+    video: '/projects/lancer-briefings-walkthrough.mp4',
+    videoPoster: '/projects/lancer-briefings-poster.jpg',
+    technologies: ['Vue 3', 'Vite', 'Cloudflare Pages', 'Foundry VTT', 'Three.js'],
+    featured: true,
+    inprogress: true,
+    category: 'web'
   },
   {
     title: 'Aethervault',

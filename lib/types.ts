@@ -4,6 +4,8 @@ export interface Project {
   title: string;
   description: string;
   images: (string | null)[]; // Array of image paths, null for missing images
+  video?: string; // Walkthrough video path; shown instead of the image carousel on featured projects
+  videoPoster?: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
