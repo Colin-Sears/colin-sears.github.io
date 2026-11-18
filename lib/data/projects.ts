@@ -56,7 +56,7 @@ export const projects: Project[] = [
       '/projects/moon-mission-image.jpg',
     ],
     technologies: ['Raspberry Pi', 'Python', 'Computer Vision', 'Gyroscope Systems', 'GUI Development'],
-    githubUrl: 'https://github.com/colin-sears/senior-design-satellite',
+    githubUrl: 'https://github.com/Colin-Sears/Pipedream',
     featured: true,
     category: 'engineering',
   },
